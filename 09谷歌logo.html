@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>			
+			.chorme {
+			    width: 200px;
+			    height: 200px;
+			    background: -webkit-linear-gradient(top,yellow 0,yellow 65%,green 65%);
+			    border-radius: 200px;
+			    position: relative;
+			    overflow: hidden;
+			}
+			
+			.chorme>div{
+			    position: absolute;
+			    width: 200px;
+			    height: 200px;
+			    border-radius: 200px;
+			}
+			
+			
+			.green {
+			    transform: rotate(-120deg);
+			    background: -webkit-linear-gradient(top,green 0,green 25%,transparent 25%);
+			}
+			
+			.yellow {
+			    transform: rotate(120deg);
+			    background: -webkit-linear-gradient(top,yellow 0,yellow 25%,transparent 25%);
+			}
+			
+			.red {
+			    background: -webkit-linear-gradient(top,red 0,red 25%,transparent 25%);
+			    z-index: 2;
+			}
+			
+			.chorme:before{
+			    width: 90px;
+			    height: 90px;
+			    background:blue;
+			    content: "";
+			    border-radius: 90px;
+			    border: 5px solid #fff;
+			    margin: auto;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    position: absolute;
+			    z-index: 3;
+			}
+			
+			.chorme:after{
+			    width: 79px;
+			    height: 100px;
+			    background: red;
+			    content: "";
+			    position: absolute;
+			    transform: rotate(-30deg) translate(16px,23px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="chorme">
+			<div class="red"></div>
+	      	<div class="green"></div>
+	      	<div class="yellow"></div>
+	  	</div>
+	</body>
+</html>
